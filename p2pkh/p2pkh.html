@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>p2pkh</title>
+		<script src="D:/workspace/idea/helloworldcoin-java/helloworldcoin-application/src/main/resources/static/english/lib/jquery-v3.5.1/jquery-3.5.1.js"></script>
+
+		<style>
+			body{width: 100%;font-size: 10px}
+		</style>
+    </head>
+    <body>
+		<div>
+				<div style="width:100px; margin-top:40px; height:auto; float:left; display:inline">
+					<div id="L4" style="width:100px; height:20px;">
+					L4
+					</div>	
+					<div id="L3" style="width:100px; height:20px;">
+					L3
+					</div>	
+					<div id="L2" style="width:100px; height:20px;">
+					L2
+					</div>	
+					<div id="L1" style="width:100px; height:20px;">
+					L1
+					</div>	
+				</div>		
+
+				<div style="width:1300px; height:auto; float:left; display:inline">
+					<div id="R101" style="width:2px; height:20px; float:left; display:inline"></div><div id="R1" style="width:95px; height:auto; float:left; display:inline">OP_PUSHDATA</div>
+					<div id="R102" style="width:2px; height:20px; float:left; display:inline"></div><div id="R2" style="width:70px; height:auto; float:left; display:inline">sign_data</div>
+					<div id="R103" style="width:2px; height:20px; float:left; display:inline"></div><div id="R3" style="width:100px; height:auto; float:left; display:inline">OP_PUSHDATA</div>
+					<div id="R104" style="width:2px; height:20px; float:left; display:inline"></div><div id="R4" style="width:100px; height:auto; float:left; display:inline">publicKey_data </div>
+					<div id="R105" style="width:2px; height:20px; float:left; display:inline"></div><div id="R5" style="width:70px; height:auto; float:left; display:inline">OP_DUP</div>
+					<div id="R106" style="width:2px; height:20px; float:left; display:inline"></div><div id="R6" style="width:85px; height:auto; float:left; display:inline">OP_HASH160</div>
+					<div id="R107" style="width:2px; height:20px; float:left; display:inline"></div><div id="R7" style="width:85px; height:auto; float:left; display:inline">OP_PUSHDATA</div>
+					<div id="R108" style="width:2px; height:20px; float:left; display:inline"></div><div id="R8" style="width:120px; height:auto; float:left; display:inline">publicKeyHash_data</div>
+					<div id="R109" style="width:2px; height:20px; float:left; display:inline"></div><div id="R9" style="width:110px; height:auto; float:left; display:inline">OP_EQUALVERIFY</div>
+					<div id="R110" style="width:2px; height:20px; float:left; display:inline"></div><div id="R10" style="width:80px; height:auto; float:left; display:inline">OP_CHECKSIG</div>
+					<div id="R111" style="width:2px; height:20px; float:left; display:inline"></div><div id="R10" style="width:80px; height:auto; float:left; display:inline"></div>
+				</div>
+		</div>
+		<button type="button" onclick="next()">点我!</button>
+        <script>
+			var index = 0;
+			function next(){
+				if(index == 8){
+					index = 0;
+				}
+				
+				if(index == 0){
+					$("#L4").html('');
+					$("#L3").html('');
+					$("#L2").html('');
+					$("#L1").html('');	
+
+
+					$("div").css("background-color", "");
+					$("#R101").css("background-color", "red");					
+				}
+				
+				if(index == 1){
+					$("#L4").html('');
+					$("#L3").html('');
+					$("#L2").html('');	
+					$("#L1").html('sign_data');
+
+
+					$("div").css("background-color", "");
+					$("#R103").css("background-color", "red");					
+				}
+				
+				if(index == 2){
+					$("#L4").html('');
+					$("#L3").html('');
+					$("#L2").html('publicKey_data');	
+					$("#L1").html('sign_data');
+
+
+					$("div").css("background-color", "");
+					$("#R105").css("background-color", "red");					
+				}
+				
+				if(index == 3){
+					$("#L4").html('');
+					$("#L3").html('publicKey_data');
+					$("#L2").html('publicKey_data');	
+					$("#L1").html('sign_data');
+
+
+					$("div").css("background-color", "");
+					$("#R106").css("background-color", "red");					
+				}
+				
+				if(index == 4){
+					$("#L4").html('');
+					$("#L3").html('publicKeyHash_data_check');
+					$("#L2").html('publicKey_data');	
+					$("#L1").html('sign_data');
+
+
+					$("div").css("background-color", "");
+					$("#R107").css("background-color", "red");					
+				}
+				
+				if(index == 5){
+					$("#L4").html('publicKeyHash_data');
+					$("#L3").html('publicKeyHash_data_check');
+					$("#L2").html('publicKey_data');	
+					$("#L1").html('sign_data');
+
+
+					$("div").css("background-color", "");
+					$("#R109").css("background-color", "red");					
+				}
+				
+				if(index == 6){
+					$("#L4").html('');
+					$("#L3").html('');
+					$("#L2").html('publicKey_data');	
+					$("#L1").html('sign_data');
+
+
+					$("div").css("background-color", "");
+					$("#R110").css("background-color", "red");					
+				}
+				
+				if(index == 7){
+					$("#L4").html('');
+					$("#L3").html('');
+					$("#L2").html('');	
+					$("#L1").html('true');
+
+
+					$("div").css("background-color", "");
+					$("#R111").css("background-color", "red");					
+				}
+				index = index + 1 ;
+			}
+			next();
+        </script>
+    </body>
+</html>
